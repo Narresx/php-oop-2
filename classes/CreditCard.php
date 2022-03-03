@@ -1,4 +1,6 @@
 <?php 
+
+require_once __DIR__ .'./Client.php';
 class CreditCard{
     public $number;
     public $credit;
