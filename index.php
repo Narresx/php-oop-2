@@ -23,7 +23,7 @@ $client = new Client('Pippo', 'Baudo', 60, $clientCredit);
 
 var_dump($client->CreditCard);
 
-var_dump($client->CreditCard->pay(100));
+var_dump($client->CreditCard->pay($product1));
 
 var_dump($client->CreditCard);
 

@@ -18,7 +18,7 @@ public function getCredit() { return $this->credit;}
 
 
 public function pay($product) {
-    $valor = $this->product->price;
+    $valor = $product->price;
     if(!is_numeric($valor) || $valor <= 0 || $this->credit < $valor) return;
     $this->credit -= $valor;
 }
