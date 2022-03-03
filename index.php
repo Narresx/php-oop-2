@@ -13,9 +13,9 @@ require_once __DIR__ .'./classes/CreditCard.php';
 require_once __DIR__ .'./classes/Product.php';
 
 $product1 = new Product('Dog treats', 'Milk Bone', 25);
-$product1 = new Product('Dog ball', 'Kong', 10);
-$product1 = new Product('Dog house', 'Suncast', 135);
-$product1 = new Product('Dog leash', 'PetSafe', 20);
+$product2 = new Product('Dog ball', 'Kong', 10);
+$product3 = new Product('Dog house', 'Suncast', 135);
+$product4 = new Product('Dog leash', 'PetSafe', 20);
 
 
 $clientCredit= new CreditCard('1518', 500);
