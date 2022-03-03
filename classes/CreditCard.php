@@ -1,6 +1,8 @@
 <?php 
 
 require_once __DIR__ .'./Client.php';
+require_once __DIR__ .'./Product.php';
+
 class CreditCard{
     public $number;
     public $credit;
@@ -14,7 +16,9 @@ class CreditCard{
 public function getNumber() { return $this->Number;}
 public function getCredit() { return $this->credit;}
 
-public function pay($valor) {
+
+public function pay($product) {
+    $valor = $this->product->price;
     if(!is_numeric($valor) || $valor <= 0 || $this->credit < $valor) return;
     $this->credit -= $valor;
 }

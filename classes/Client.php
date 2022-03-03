@@ -1,6 +1,8 @@
 <?php 
 
 require_once __DIR__ .'./CreditCard.php';
+require_once __DIR__ .'./Product.php';
+
 
 class Client
 {
@@ -18,13 +20,24 @@ class Client
  $this->age = $age;
  $this->CreditCard = $CreditCard;
  $this->registered = $registered;
- $this->discounts = $discounts;
 
 }
 
-public function getDiscount() { return $this->discounts}
+public function getDiscount() { return $this->discounts;}
 
 public function getRegistered() { return $this->registered; }
+
+public function getProduct(){
+    return $this->product;
+}
+
+public function setProduct($product) {
+    if ($product instanceof Product === false) {
+        return;
+    } else {
+        $this->product = $product;
+    }
+}
 
 public function getCreditCard() {
     return $this->CreditCard;
