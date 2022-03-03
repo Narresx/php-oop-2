@@ -21,11 +21,22 @@ $product4 = new Product('Dog leash', 'PetSafe', 20);
 $clientCredit= new CreditCard('1518', 500);
 $client = new Client('Pippo', 'Baudo', 60, $clientCredit);
 
+$clientCredit1= new CreditCard('1558', 400);
+$client1 = new Client('Pippo', 'Baudo', 60, $clientCredit1, 'Registrato');
+
+
 var_dump($client->CreditCard);
 
-var_dump($client->CreditCard->pay($product1));
+var_dump($client->CreditCard->pay($product1, null));
 
 var_dump($client->CreditCard);
+
+var_dump($client1->CreditCard);
+
+var_dump($client1->CreditCard->pay($product1, 'registrato'));
+
+var_dump($client1->CreditCard);
+
 
 ?>
 

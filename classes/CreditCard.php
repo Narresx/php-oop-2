@@ -17,10 +17,17 @@ public function getNumber() { return $this->Number;}
 public function getCredit() { return $this->credit;}
 
 
-public function pay($product) {
-    $valor = $product->price;
-    if(!is_numeric($valor) || $valor <= 0 || $this->credit < $valor) return;
-    $this->credit -= $valor;
+public function pay($product, $registered) {
+    if($registered === null){
+        $valor = $product->price;
+        if(!is_numeric($valor) || $valor <= 0 || $this->credit < $valor) return;
+        $this->credit -= $valor; 
+    }
+    else {
+        $valor = $product->price*0.8;
+        if(!is_numeric($valor) || $valor <= 0 || $this->credit < $valor) return;
+        $this->credit -= $valor;
+    }
 }
 
 }
