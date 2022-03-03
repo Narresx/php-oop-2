@@ -11,6 +11,11 @@ class Product{
  $this->brand = $brand;
  $this->price = $price;
 }
+
+public function getName() { return $this->name;}
+public function getBrand() { return $this->brand;}
+public function getPrice() { return $this->price;}
+
 }
 
 ?>
