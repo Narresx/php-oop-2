@@ -12,6 +12,12 @@ require_once __DIR__ .'./classes/Client.php';
 require_once __DIR__ .'./classes/CreditCard.php';
 require_once __DIR__ .'./classes/Product.php';
 
+$product1 = new Product('Dog treats', 'Milk Bone', 25);
+$product1 = new Product('Dog ball', 'Kong', 10);
+$product1 = new Product('Dog house', 'Suncast', 135);
+$product1 = new Product('Dog leash', 'PetSafe', 20);
+
+
 $clientCredit= new CreditCard('1518', 500);
 $client = new Client('Pippo', 'Baudo', 60, $clientCredit);
 
